@@ -12,8 +12,7 @@ function Background() {
         muted
         preload="auto"
         /> */}
-        <img className="background-image" src={Backgroundimage} alt="background image"
-         />
+        <img className="background-image" src={Backgroundimage} alt="background image" />
 
         
     </div>

@@ -28,3 +28,25 @@
 .icon{
     padding-right:10px;
 }
+
+
+
+
+@media (max-width:425px){
+    
+    
+    .footer{
+         font-size: 0.85rem;
+         padding-right: 13px;
+      
+    }
+    .mail-link{
+     
+        font-size: 0.95rem;
+    }
+
+}
+
+@media (max-width:768px){
+    
+}

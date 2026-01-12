@@ -8,10 +8,13 @@ import pythonicon from "../../assets/icons/python.png"
 import djangoicon from "../../assets/icons/django.png"
 import sqlicon from "../../assets/icons/sql.png"
 import giticon from "../../assets/icons/git.png"
-import githubicon from "../../assets/icons/github.png"
+import githubicon from "../../assets/icons/github_logo.png"
 import javaicon from "../../assets/icons/java.png"
 
+import useScrollReveal  from "../../hooks/useScrollReveal"
+
 const skillsData=[
+    
     {
         category:"Frontend",
         skills:[
@@ -54,8 +57,11 @@ const skillsData=[
 
 
 function Skills() {
+    const [ref,visible]=useScrollReveal()
   return (
-    <section id="skills" className="skills-section">
+    <section id="skills" 
+    ref={ref}
+    className={`skills-section reveal reveal-left ${visible?"active":""}`}>
         <h2 className="skills-title">Skills</h2>
 
         <div className="skills-grid">

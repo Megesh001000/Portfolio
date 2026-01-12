@@ -59,10 +59,14 @@
         max-width: 359px;
         text-align: center;
         line-height: 1.55;
+        
        
        
     }
     .profile-photo{
        
     }
+}
+@media(max-width:768px){
+    
 }

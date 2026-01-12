@@ -4,7 +4,7 @@ import { FaEnvelope } from "react-icons/fa"
 
 function Footer() {
   return (
-    <footer className="footer">
+    <footer className="footer" >
         <p>Designed and Developed By Megeshwran M</p>
         <div className="mail-link">
             <a href="mailto:megesh16@gmail.com" ><span className="icon">

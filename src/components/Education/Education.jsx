@@ -1,4 +1,5 @@
 import "./Education.css"
+import useScrollReveal from "../../hooks/useScrollReveal"
 
 const educationData=[
    
@@ -25,11 +26,34 @@ const educationData=[
         year:"2022-2026",
         location:"Chennai"
     },
+    // {
+    //     category:"SSLC",
+    //     course:"Grade-10",
+    //     place_name:"NEELAN MATRICULATION SCHOOL",
+    //     year:"2020",
+    //     location:"Chennai, Tamilnadu"
+    // },
+    //  {
+    //     category:"Higher Secondary",
+    //     course:"Grade - 11 & 12",
+    //     place_name:"VALLUVAR  GURUKULAM MATRIC  HIGHER SEC SCHOOL",
+    //     year:"2020-2022",
+    //     location:"Chennai, Tamilnadu"
+    // },
+    // {
+    //     category:"Bachelor Degree",
+    //     course:"B Tech CSE Specialization in Cyber Security",
+    //     place_name:"Bharath institute of science and technology",
+    //     year:"2022-2026",
+    //     location:"Chennai, Tamilnadu"
+    // },
 ]
 
 function Education() {
+    const [ref,visible] =useScrollReveal()
   return (
-    <section id="education" className="education-section">
+    <section id="education" ref={ref} 
+    className={`education-section reveal reveal-scale ${visible?"active":""}`}>
         <h2 className="education-title">Education</h2>
         <div className="education-grid">
             {educationData.map((details,index)=>

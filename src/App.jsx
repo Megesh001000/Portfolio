@@ -12,20 +12,23 @@ import Contact from './components/Contact/Contact'
 import Skills from './components/Skills/Skills'
 import Footer from './components/Footer/Footer'
 import Education from './components/Education/Education'
+import ScrollIndicator from './hooks/ScrollIndiicator'
+import Certificates from './components/Certificates/Certificates'
 
 function App() {
   const [showIntro,setShowIntro]=useState(true)
   const [exitIntro,setExitIntro]=useState(false)
+  // const [showProfile,setShowProfile]=useState(false)
 
   useEffect(()=>{
     const exitTimer=setTimeout(()=>{
       setExitIntro(true)
 
 
-    },4000)
+    },3000)
     const timer=setTimeout(()=>{
       setShowIntro(false)
-    },3000)
+    },2000)
     return () =>{clearTimeout(timer)
       clearTimeout(exitTimer)
     };
@@ -35,6 +38,9 @@ function App() {
   return (
     <>
       <Background/>
+      {/* <ScrollIndicator/> */}
+      {/* {!showProfile && <Intro onFinish={() => setShowProfile(true)} />}
+      {showProfile && <Profile />} */}
       {showIntro &&  <Intro  exit={exitIntro}/>}
       {!showIntro && (
         <>
@@ -42,6 +48,7 @@ function App() {
          <Profile/>
          <About/>
          <Education/>
+        
          <Skills/>
          <Projects/>
          <Contact/>

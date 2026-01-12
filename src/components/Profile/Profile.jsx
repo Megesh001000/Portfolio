@@ -1,14 +1,17 @@
 import "./Profile.css"
 // import profileImg from "../../assets/profile_image.JPG"
-
+import useScrollReveal  from "../../hooks/useScrollReveal"
 
 
 function Profile() {
+    const [ref,visible]=useScrollReveal()
   return (
-    <section id="home" className="profile-section ">
+    <section id="home" className={`profile-section reveal reveal-scale ${visible?"active":""}`}
+    ref={ref}>
         <div className="profile-wrapper">
             {/* <div className="row align-items-start profile-row"> */}
                 <div className=" profile-text">
+                    {/* <h1 className="profile-name">Dharshan M</h1> */}
                     <h1 className="profile-name">Megeshwaran M</h1>
                     <h3 className="profile-role">Full Stack Developer</h3>
                     <p className="profile-about">I design and build modern web applications with clean user interfaces,
