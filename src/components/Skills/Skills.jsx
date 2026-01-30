@@ -10,6 +10,7 @@ import sqlicon from "../../assets/icons/sql.png"
 import giticon from "../../assets/icons/git.png"
 import githubicon from "../../assets/icons/github_logo.png"
 import javaicon from "../../assets/icons/java.png"
+import postmanicon from "../../assets/icons/postman.png"
 
 import useScrollReveal  from "../../hooks/useScrollReveal"
 
@@ -43,14 +44,15 @@ const skillsData=[
         category:"Tools",
         skills:[
             {name:"Git",icon:giticon},
-            {name:"Github",icon:githubicon}
+            {name:"Github",icon:githubicon},
+            {name:"Postman",icon:postmanicon},
         ]
     },
     {
         category:"Other Programming Languages [Basic]",
         skills:[{name:"Java",icon:javaicon}]
 
-    }
+    },
 
 
 ]
